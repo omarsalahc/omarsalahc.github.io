@@ -16,9 +16,9 @@ author:
   location: Stockholm, Sweden
   avatar: /assets/images/profile.jpg   # add your headshot here, or leave the file absent
   email: your-email@caltech.edu
-  orcid: ""                            # e.g. 0009-0000-0000-0000
+  orcid: "0000-0003-0191-6507"                            # e.g. 0009-0000-0000-0000
   github: omarsalahc
-  linkedin: ""                         # e.g. omar-salah-123456
+  linkedin: "omar-salah-capaceta"                         # e.g. omar-salah-123456
   scholar: ""                          # your Google Scholar user ID
 
 # ---- Build ----
