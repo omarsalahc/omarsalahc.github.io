@@ -1,0 +1,68 @@
+<aside class="sidebar">
+
+  {% assign av = site.author.avatar %}
+  {% if av and av != '' %}
+    <img class="avatar" src="{{ av | relative_url }}" alt="{{ site.author.name }}"
+         onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='block';">
+  {% endif %}
+  <svg id="avatar-fallback" class="avatar avatar-fallback" viewBox="0 0 120 120" role="img"
+       aria-label="Illustration of a watch face" {% if av and av != '' %}style="display:none"{% endif %}>
+    <circle class="w-face" cx="60" cy="60" r="52"/>
+    <g class="w-ticks">
+      <line x1="60" y1="12" x2="60" y2="20" class="major"/>
+      <line x1="108" y1="60" x2="100" y2="60" class="major"/>
+      <line x1="60" y1="108" x2="60" y2="100" class="major"/>
+      <line x1="12" y1="60" x2="20" y2="60" class="major"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(30 60 60)"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(60 60 60)"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(120 60 60)"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(150 60 60)"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(210 60 60)"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(240 60 60)"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(300 60 60)"/>
+      <line x1="60" y1="14" x2="60" y2="19" transform="rotate(330 60 60)"/>
+    </g>
+    <line class="w-hand" x1="60" y1="60" x2="60" y2="34" transform="rotate(305 60 60)" stroke-width="3"/>
+    <line class="w-hand" x1="60" y1="60" x2="60" y2="24" transform="rotate(60 60 60)" stroke-width="2.2"/>
+    <circle class="w-pin" cx="60" cy="60" r="2.6"/>
+  </svg>
+
+  <h1 class="name">{{ site.author.name }}</h1>
+
+  <p class="role">
+    {{ site.author.role }}<br>
+    <span class="muted">{{ site.author.affiliation }}</span>
+  </p>
+
+  {% if site.author.current and site.author.current != '' %}
+  <p class="role current">{{ site.author.current }}</p>
+  {% endif %}
+
+  <ul class="meta">
+    {% if site.author.location and site.author.location != '' %}
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.4"/></svg>
+      {{ site.author.location }}
+    </li>
+    {% endif %}
+  </ul>
+
+  <ul class="links">
+    {% if site.author.email and site.author.email != '' %}
+      <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+    {% endif %}
+    {% if site.author.orcid and site.author.orcid != '' %}
+      <li><a href="https://orcid.org/{{ site.author.orcid }}">ORCID</a></li>
+    {% endif %}
+    {% if site.author.github and site.author.github != '' %}
+      <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+    {% endif %}
+    {% if site.author.linkedin and site.author.linkedin != '' %}
+      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
+    {% endif %}
+    {% if site.author.scholar and site.author.scholar != '' %}
+      <li><a href="https://scholar.google.com/citations?user={{ site.author.scholar }}">Google Scholar</a></li>
+    {% endif %}
+  </ul>
+
+</aside>

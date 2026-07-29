@@ -1,0 +1,37 @@
+# ---- Site settings ----
+title: Omar Salah
+description: >-
+  PhD student in biochemistry and molecular biophysics at Caltech.
+  Fulbright U.S. Student Researcher at the Karolinska Institutet.
+url: "https://omarsalahc.github.io"
+baseurl: ""
+lang: en
+
+# ---- Author / sidebar ----
+author:
+  name: Omar Salah
+  role: PhD Student, Biochemistry &amp; Molecular Biophysics
+  affiliation: California Institute of Technology
+  current: Fulbright U.S. Student Researcher, Karolinska Institutet
+  location: Stockholm, Sweden
+  avatar: /assets/images/profile.jpg   # add your headshot here, or leave the file absent
+  email: your-email@caltech.edu
+  orcid: ""                            # e.g. 0009-0000-0000-0000
+  github: omarsalahc
+  linkedin: ""                         # e.g. omar-salah-123456
+  scholar: ""                          # your Google Scholar user ID
+
+# ---- Build ----
+markdown: kramdown
+kramdown:
+  input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
