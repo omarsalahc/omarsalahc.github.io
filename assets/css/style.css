@@ -52,8 +52,8 @@ a:focus-visible{ outline:2px solid var(--brass-soft); outline-offset:3px; border
 /* ---------- Avatar ---------- */
 .avatar{
   display:block;
-  width:8.5rem;
-  height:8.5rem;
+  width:10rem;
+  height:10rem;
   margin-bottom:1.5rem;
   border-radius:3px;
   object-fit:cover;
